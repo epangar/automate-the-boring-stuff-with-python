@@ -8,8 +8,7 @@ calling collatz() on that number until the function returns the value 1.
 
 
 def collatz(number):
-    
-    
+          
     if number % 2 == 0:
         number = (number / 2)
         #print number
@@ -20,7 +19,11 @@ def collatz(number):
         return number
 
 
-user_input = int( raw_input ("Please input a number: "))
+try:
+    user_input = int( raw_input ("Please input a number: "))
+except ValueError:
+    print('You must enter an integer type.')
+    
 
 print(user_input)
 
