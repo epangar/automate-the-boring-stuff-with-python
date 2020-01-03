@@ -5,7 +5,7 @@ import sys
 
 while True:
     n = random.randint(0,9)
-    print n
+    print(n)
 
     if n!= 0:
         print('Let\s keep going...')

@@ -9,6 +9,5 @@ def divide(divisor):
 
 for i in range (0,20):
     number = random.randint(0,5)
-    print number
 
-    print divide(number)
+    print (divide(number))
