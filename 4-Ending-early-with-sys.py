@@ -8,8 +8,8 @@ while True:
     print n
 
     if n!= 0:
-        print("Let\s keep going...")
+        print('Let\s keep going...')
         continue
     else:
-        print("0! Bye!")
+        print('0! Bye!')
         sys.exit()

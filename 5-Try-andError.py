@@ -4,7 +4,7 @@ def divide(divisor):
     try:
         return 100 / divisor
     except ZeroDivisionError:
-        print("ERROR, DIVIDE BY ZERO")
+        print('ERROR, DIVIDE BY ZERO')
 
 
 for i in range (0,20):
