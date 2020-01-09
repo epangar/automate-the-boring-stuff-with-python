@@ -58,8 +58,6 @@ for i in range(0, 6):
   
   
   for j in range(0, len(grid)):
-    
-    #print(j,i)
     item = grid[j][i]
     print (item, end=" ")
   print("\n")
