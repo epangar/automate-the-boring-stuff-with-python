@@ -46,18 +46,23 @@ grid = [
   ['.', '.', '.', '.', '.', '.'] 
 ]
 
-my_copy = []
+#print grid[8][5]
+
+# for i in range(0, len(grid)):
+#   print (grid[i])
 
 
-for i in range(0, len(grid)):
+for i in range(0, 6):
+  
   row = grid[i]
-  new_row=[]
-
-  for j in range(0, len(row)):
-    """ print (row[j]) """
-    new_row.append(row[j])
-  my_copy.append(new_row)
+  
+  
+  for j in range(0, len(grid)):
+    
+    #print(j,i)
+    item = grid[j][i]
+    print (item, end=" ")
   print("\n")
 
 
-print (my_copy)
+
