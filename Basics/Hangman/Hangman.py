@@ -11,6 +11,7 @@ def choose_word():
 total_tries = 10
 secret_word = choose_word()
 guessed_so_far = "-" * len(secret_word)
+tried_characters = []
 
 def update_guessed_so_far(input):
     global guessed_so_far
@@ -26,33 +27,46 @@ def update_guessed_so_far(input):
 
 
 
-def check(input):
-    
+def check(input): 
+
     current_input = input.upper()
+    global total_tries , guessed_so_far, tried_characters
     if current_input in secret_word:
-        print ("Yes, %s appears in the word! Keep going." % current_input)
+        print ("\nYes, %s appears in the word!" % current_input)
         update_guessed_so_far(current_input)
+
+        if total_tries > 0 and secret_word == guessed_so_far:
+            win()
+
+
     else:
         print ("Nope!")
-        global total_tries 
-        total_tries -= 1
+        
+        if input in tried_characters:
+            pass
+        else:
+            tried_characters.append(input)
+            total_tries -= 1
+        
         
         if (total_tries > 1):
-            print ('You still have %d tries.' % total_tries)
+            print ('\nYou still have %d tries.' % total_tries)
         elif (total_tries == 1):
-            print ('You still have 1 try.')
+            print ('\nYou still have 1 try.')
+        else:
+            lose()
     
-    global guessed_so_far
     print (guessed_so_far)
 
 def ask():
     
-    user_input = input('Please add a character: ')
+    user_input = input('\nPlease add a character: ')
     check(user_input)
 
 
 def win():
-    print ('You won! Congratulations! :D')
+    print('Yes, the word was %s!' % secret_word)
+    print('You won! Congratulations! :D')
     sys.exit()
 
 
@@ -64,7 +78,10 @@ def lose():
 print ('I have chosen a random word. You have 10 tries.')
 
 while total_tries >= 1:
-
-    ask()
+    
+    if secret_word != guessed_so_far:
+        ask()
+    
+        
 
     
