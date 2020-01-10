@@ -46,13 +46,9 @@ grid = [
   ['.', '.', '.', '.', '.', '.'] 
 ]
 
-#print grid[8][5]
+rowlength = len(grid[0])
 
-# for i in range(0, len(grid)):
-#   print (grid[i])
-
-
-for i in range(0, 6):
+for i in range(0, rowlength):
   
   row = grid[i]
   
