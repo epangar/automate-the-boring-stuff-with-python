@@ -11,11 +11,11 @@ def collatz(number):
           
     if number % 2 == 0:
         number = (number / 2)
-        return number
+        
     else:
         number = (number * 3) + 1
-        return number
-
+        
+    return int(number)
 
 try:
     user_input = int( input ('Please input a number: '))
