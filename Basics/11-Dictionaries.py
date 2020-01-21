@@ -1,3 +1,6 @@
+import pprint #import prety print
+
+
 spam = {
     'color': 'red', 
     'age': 42, 
@@ -65,5 +68,5 @@ count = {}
 for character in message:
     count.setdefault(character, 0)
     count[character] = count[character] + 1
-print (count)
+pprint.pprint (count) #pretty print
 
