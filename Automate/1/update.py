@@ -5,9 +5,9 @@ def run_me(arr):
 		parameter = element.split()
 		call(parameter) 
 
-intructions = [
+instructions = [
   'npm outdated -depth=0 -g',
   "npm update -g"
 ]
 
-run_me(intructions)
+run_me(instructions)

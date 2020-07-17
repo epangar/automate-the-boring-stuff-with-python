@@ -1,4 +1,4 @@
-#This code imports sys and random, and exists when the number is 0
+#This code imports sys and random, and exits when the number is 0
 
 import random
 import sys
