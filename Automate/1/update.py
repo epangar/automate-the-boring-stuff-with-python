@@ -1,9 +1,12 @@
 from subprocess import call
+import platform
 
 def run_me(arr):
-	for element in arr:
-		parameter = element.split()
-		call(parameter) 
+	if platform.system().startswith('linux'):
+		for element in arr:
+			parameter = element.split()
+			call(parameter) 
+#Add Windows methods
 
 instructions = [
   'npm outdated -depth=0 -g',
